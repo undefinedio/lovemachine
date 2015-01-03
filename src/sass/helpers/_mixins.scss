@@ -1,0 +1,56 @@
+@mixin rc($radius: 0.5em) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($transition-time, $transition-property: all , $method: ease-in-out) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin placeholder($color: black, $text-transform : capitalize) {
+    ::-webkit-input-placeholder {
+        color: $color;
+        text-transform: $text-transform;
+    }
+    :-moz-placeholder {
+        color: $color;
+        text-transform: $text-transform;
+    }
+    ::-moz-placeholder {
+        color: $color;
+        text-transform: $text-transform;
+    }
+    :-ms-input-placeholder {
+        color: $color;
+        text-transform: $text-transform;
+    }
+}
+
+$media: screen;
+$feature: min-width;
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == xm {
+        @media #{$media} and ($feature: $screen-xm-min) {
+            @content;
+        }
+    } @else if $breakpoint == sm {
+        @media #{$media} and ($feature: $screen-sm-min) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media #{$media} and ($feature: $screen-md-min) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media #{$media} and ($feature: $screen-lg-min) {
+            @content;
+        }
+    }
+}
+
