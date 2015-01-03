@@ -34,8 +34,8 @@ io.on('connection', function(socket){
         var base64_data = matches[2];
         var buffer = new Buffer(base64_data, 'base64');
 
-        fs.writeFile(__dirname + '/img.png', buffer, function (err) {
-            tweetPicture('img.png');
+        fs.writeFile(__dirname + '/pictures/img.png', buffer, function (err) {
+            tweetPicture('/pictures/img.png');
         });
     });
 });

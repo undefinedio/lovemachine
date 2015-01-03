@@ -134,9 +134,9 @@ MyApp.PhotoController = {
             video = document.querySelector('video');
 
         navigator.getMedia = ( navigator.getUserMedia ||
-            navigator.webkitGetUserMedia ||
-            navigator.mozGetUserMedia ||
-            navigator.msGetUserMedia);
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia);
 
         navigator.getMedia(
             {
