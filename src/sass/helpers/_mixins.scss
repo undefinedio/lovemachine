@@ -36,21 +36,32 @@ $feature: min-width;
 
 @mixin mq($breakpoint) {
     @if $breakpoint == xm {
-        @media #{$media} and ($feature: $screen-xm-min) {
+        @media #{$media} and ($feature: 480) {
             @content;
         }
     } @else if $breakpoint == sm {
-        @media #{$media} and ($feature: $screen-sm-min) {
+        @media #{$media} and ($feature: 768) {
             @content;
         }
     } @else if $breakpoint == md {
-        @media #{$media} and ($feature: $screen-md-min) {
+        @media #{$media} and ($feature: 992) {
             @content;
         }
     } @else if $breakpoint == lg {
-        @media #{$media} and ($feature: $screen-lg-min) {
+        @media #{$media} and ($feature: 1140) {
             @content;
         }
     }
 }
 
+@mixin btn($color) {
+    background-color: $color;
+    border-radius: 5px;
+    padding: .5em .5em;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: mix(black, $color, 2.5%);
+    }
+}

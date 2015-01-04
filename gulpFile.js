@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
+var neat = require('node-neat');
 
 gulp.task('default', function() {
     gulp.watch('src/js/**/*.js',['scripts']);
@@ -25,7 +26,8 @@ gulp.task('sass', function () {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: require('node-bourbon').includePaths
+            includePaths: require('node-neat').includePaths
+
         }))
         .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
         .pipe(sourcemaps.write())

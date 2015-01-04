@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>LOVE AT FIRST SIGHT</title>
-    <link rel="stylesheet" href="public/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="public/main.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="assets/js/vendor/jquery-1.10.2.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
@@ -13,51 +11,68 @@
     <script src="bower_components/backbone.babysitter/lib/backbone.babysitter.js"></script>
     <script src="bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
     <script src="bower_components/marionette/lib/backbone.marionette.js"></script>
-
 </head>
 <body>
 <div class="container">
-    <div id="main"></div>
-    <div id="video"></div>
-</div>
-<script type="text/template" id="video-template">
-    <div class="video-container">
-        <video autoplay id="video-cam"></video>
-        <canvas id="canvas"></canvas>
-    </div>
-</script>
-<script type="text/template" id="start-template">
-    <div class="start-tmpl">
-        <input class="_boy" type="text" placeholder="Your Twitterhandle or name..."/>
-        <input class="_girl" type="text" placeholder="Your Twitterhandle or name..."/>
+    <!--<div class="page end">-->
+        <!--<div class="video-container">-->
+        <!--<video autoplay id="video-cam"></video>-->
+        <!--<canvas id="canvas"></canvas>-->
+        <!--</div>-->
+    <!--</div>-->
 
-        <div class="btn-next">
+    <!--<div class="page love">-->
+        <!--<div class="bang"></div>-->
+        <!--<div id="heart"></div>-->
+    <!--</div>-->
+
+    <!--<div class="page explanation">-->
+        <!--<div class="countdown">-->
+            <!--1-->
+        <!--</div>-->
+        <!--<p>-->
+            <!--On 3 hold eachother's hand and something magical will happen.-->
+        <!--</p>-->
+    <!--</div>-->
+
+    <div class="page start">
+        <div class="logo">TRUE ROMANCE</div>
+        <div class="names-container">
+            <div class="boy">
+                <p>BOY</p>
+                <div class="arrow"></div>
+            </div>
+            <div class="girl">
+                <p>GIRL</p>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="foto-container">
+            <video autoplay id="video-cam"></video>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="btn btn-start">
             START
         </div>
     </div>
+
+
+</div>
+<script type="text/template" id="video-template">
+
+</script>
+<script type="text/template" id="start-template">
+
 </script>
 <script type="text/template" id="countdown-template">
     <div class="timer">
     </div>
 </script>
 <script type="text/template" id="explanation-template">
-    <div class="explanation">
-        Hello <%= girl.name %> & <%= boy.name %>
-        <ul>
-            <li>Hold the roses</li>
-            <li>Give eachother a hand on 3</li>
-            <li>Something magical will happen</li>
-        </ul>
-    </div>
-    <div class="btn-next">
-        Countdown
-    </div>
+
 </script>
 <script type="text/template" id="love-template">
-    <div class="love-container">
-        <div class="bang"></div>
-        <div id="heart"></div>
-    </div>
+
 </script>
 <script type="text/template" id="pic-template">
     <div class="video-container">
@@ -68,8 +83,7 @@
     </div>
     <div class="btn-send">TWITTER</div>
 </script>
-<audio id="lala" src="assets/mp3/love.mp3" preload="auto"></audio>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/app.js"></script>
+<audio id="lala" src="public/mp3/love.mp3" preload="auto"></audio>
+<script src="public/app.js"></script>
 </body>
 </html>
