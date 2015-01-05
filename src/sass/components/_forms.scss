@@ -1,0 +1,15 @@
+input {
+    font-family: "Futura", Georgia, Serif;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: white;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include placeholder {
+        color: white;
+    }
+}

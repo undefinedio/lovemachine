@@ -1,0 +1,27 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Futura", Georgia, Serif;
+    background-color: #7cd8ff;
+}
+
+.page {
+    padding-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fb0000;
+}
+
+h1 span {
+    font-size: 36px;
+}
+
+.container {
+    @include outer-container(1140px);
+}

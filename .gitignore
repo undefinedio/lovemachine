@@ -116,3 +116,5 @@ $RECYCLE.BIN/
 bower_components
 
 pictures
+
+public/app.js

@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>LOVE AT FIRST SIGHT</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+</head>
+    <link rel="stylesheet" href="public/main.css">
 </head>
 <body>
-<div id="js-container"></div>
-<script src="public/app.js"></script>
-<script src="/socket.io/socket.io.js"></script>
+<div class="container">
+    <div class="page start">
+        <div class="logo">TRUE ROMANCE</div>
+        <div class="names-container">
+            <div class="boy">
+                <p>BOY</p>
+                <div class="arrow"></div>
+            </div>
+            <div class="girl">
+                <p>GIRL</p>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="foto-container">
+            <video autoplay id="video-cam"></video>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="btn btn-start">
+            START
+        </div>
+    </div>
+</div>
+<!--<script src="public/app.js"></script>-->
+<!--<script src="/socket.io/socket.io.js"></script>-->
 </body>
 </html>
